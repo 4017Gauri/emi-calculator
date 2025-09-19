@@ -1,0 +1,117 @@
+:root {
+  --card: #ffffff;
+  --accent: #4cafef;
+  --text-dark: #222;
+}
+
+/* 🔥 Background Animation */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #ff6ec4, #48c6ef);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: var(--text-dark);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🔹 Container Card */
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+/* 🔹 Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 🔹 Input Rows */
+.inputs .row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inputs label {
+  width: 200px;
+  font-weight: 500;
+}
+
+.inputs input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.inputs input:focus {
+  border: 1px solid var(--accent);
+  outline: none;
+}
+
+/* 🔹 Button */
+button {
+  width: 100%;
+  margin-top: 15px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #3ae259;
+}
+
+/* 🔹 Results Table */
+.results {
+  margin-top: 30px;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.results td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.results td:first-child {
+  font-weight: bold;
+  color: #444;
+}
+
+/* 🔹 Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}

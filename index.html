@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unique EMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>💰 EMI Calculator</h1>
+
+    <section class="inputs">
+      <div class="row">
+        <label>Loan Amount (₹):</label>
+        <input id="loan" type="number" placeholder="e.g. 500000" />
+      </div>
+
+      <div class="row">
+        <label>Annual Interest Rate (%):</label>
+        <input id="rate" type="number" placeholder="e.g. 10" />
+      </div>
+
+      <div class="row">
+        <label>Tenure (Months):</label>
+        <input id="months" type="number" placeholder="e.g. 60" />
+      </div>
+
+      <button id="calc-emi">🔍 Calculate EMI</button>
+    </section>
+
+    <section class="results hidden" id="results">
+      <h2>📊 EMI Summary</h2>
+      <table>
+        <tr><td>Monthly EMI</td><td id="emi-val">-</td></tr>
+        <tr><td>Total Payment</td><td id="total-val">-</td></tr>
+        <tr><td>Total Interest</td><td id="interest-val">-</td></tr>
+      </table>
+
+      <h3>Breakdown</h3>
+      <canvas id="emiChart"></canvas>
+    </section>
+
+    <footer>
+      <small>⚡ Built in VS Code · Unique EMI Calculator</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
